@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# This script is displaying "school" file status
+a=0
+b=0
+for i in {1..100}
+do
+	a=$((i%3))
+	b=$((i%5))
+	if [ $a -eq 0 ] && [ $b -eq 0 ]; then
+		echo "FizzBuzz";
+	else
+		if [ $a -eq 0 ]; then
+			echo "Fizz";
+		else
+			if [ $b -eq 0 ]; then
+				echo "Buzz";
+			else
+				echo "$i";			
+			fi
+		fi
+	fi
+	
+	
+done
