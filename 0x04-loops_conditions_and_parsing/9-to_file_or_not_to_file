@@ -7,7 +7,7 @@ if [ -e "$file" ]; then
     
 	
 	if [ -d "$file" ]; then
-		echo "$file exists but it’s a directory"
+		echo "$file exists but it's a directory"
 	else
 		echo "$file file exists"
 		if [ -s "$file" ]; then
