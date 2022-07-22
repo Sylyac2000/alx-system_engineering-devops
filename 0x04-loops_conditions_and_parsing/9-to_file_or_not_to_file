@@ -1,27 +1,22 @@
 #!/usr/bin/env bash
-# This script is displaying the content of the current directory
+# This script is displaying "school" file status
 
 file="school"
 
 if [ -e "$file" ]; then
     
-	
-	if [ -d "$file" ]; then
-		echo "$file exists but it's a directory"
-	else
-		echo "$file file exists"
+	echo "$file file exists"
+	if [ -f "$file" ]; then
 		if [ -s "$file" ]; then
 			echo "$file file is not empty"
 		else
 			echo "$file file is empty"
 		fi
+		echo "$file is a regular file"
+	else
+		echo "$file file is not empty"
     fi
 
-    if [ -f "$file" ]; then
-	echo "$file is a regular file"
-    fi
-	
-	
 
 else
     echo "$file file does not exist"
