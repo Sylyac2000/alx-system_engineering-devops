@@ -15,6 +15,10 @@ if [ -e "$file" ]; then
     if [ -f "$file" ]; then
 	echo "$file is a regular file"
     fi
+	
+	if [ -d "$file" ]; then
+	echo "$file exists but it’s a directory"
+    fi
 
 else
     echo "$file file does not exist"
