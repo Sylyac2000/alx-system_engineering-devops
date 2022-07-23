@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#A Bash script that kills script "7-highlander" from previous task
+
+pkill -KILL -f "7-highlander"
