@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#A Bash script that kills script "To infinity and beyond" from previous task
+
+msgtodisplay()
+{
+    echo "I am invincible!!!"
+}
+trap "msgtodisplay" SIGTERM
+while :
+do 
+	echo "To infinity and beyond"; 
+	sleep 2
+done
