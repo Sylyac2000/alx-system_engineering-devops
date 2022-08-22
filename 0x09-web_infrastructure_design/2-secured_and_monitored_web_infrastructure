@@ -1,0 +1,39 @@
+https://imgur.com/a/80NOuVv
+
+0. Simple Web Stack
+
+What is a Server?
+
+A server is a computer program or device that provides 
+a service to another computer program and its user, also known as the client.
+
+What is the role of the domain name
+
+The role of the domain name is to replace complex IP addresses numbers 
+into easily understandable names so humans can remember and communicate them in a better way
+
+What type of DNS record www is in www.foobar.com
+
+DNS record of www belongs to a subdomain of the www.foobar.com
+
+What is the role of the web server
+
+Web servers are what make Web hosting possible, that is, 
+the possibility of renting a space on a server to store the files of our site.
+
+The main job of a web server is to display 
+website content through storing, processing and delivering webpages to users.
+
+Issues with this simple web infrastructure
+
+-if component of the system fails, there is no backup that can support 
+the continuity of the functionality of the system, 
+bringing the whole system to a collapse by being unable to operate.
+
+-if some structure or node in the system needs to be repaired, 
+the whole system has to be shut down, while the maintenance is done.
+
+-Overload of traffic can be a risk to the server capacity. 
+This, because there is no possibility to scale the service with additional servers as backup. 
+Leading to a possible breakdown of the web page and client requests, 
+as traffic surpasess servers capacity
