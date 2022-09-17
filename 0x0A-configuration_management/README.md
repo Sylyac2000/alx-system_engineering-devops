@@ -1,4 +1,4 @@
-## 0x09. Web infrastructure design
+## 0x0A. Configuration management
 
 ## Requirements
 * Language: Python 3.8.5 (and C )
@@ -10,10 +10,7 @@
 This repository holds some python projects I worked on at ALX.
 
 ## Concepts to be learned in this repository:
-You must be able to draw a diagram covering the web stack you built with the sysadmin/devops track projects
-You must be able to explain what each component is doing
-You must be able to explain system redundancy
-Know all the mentioned acronyms: LAMP, SPOF, QPS
+Configuration management
 
 ## Description of what each file shows:
 0. Create a file
