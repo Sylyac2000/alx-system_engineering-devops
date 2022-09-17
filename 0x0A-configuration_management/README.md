@@ -16,6 +16,6 @@ You must be able to explain system redundancy
 Know all the mentioned acronyms: LAMP, SPOF, QPS
 
 ## Description of what each file shows:
-0. Simple web stack
-1. Distributed web infrastructure
-2. Secured and monitored web infrastructure
+0. Create a file
+1. Install a package
+2. Execute a command
