@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-#A Bash script that transfers a file from our client to a server
+#A Bash script that Install nginx web server to a server
 
 sudo apt-get -y update
 sudo apt-get -y install nginx
-echo "Hello World!" > /usr/share/nginx/html/index.html
+echo "Hello World!" | sudo tee /usr/share/nginx/html/index.html
 sudo service nginx start
