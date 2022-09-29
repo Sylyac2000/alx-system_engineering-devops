@@ -16,6 +16,6 @@ Network basics
 Web stack debugging
 
 ## Description of what each file shows:
-0. Double the number of webservers
-1. Install your load balancer
+0. Nginx likes port 80
+1. Make it sweet and short
 
