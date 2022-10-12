@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#a Bash script that run as nginx as nginx user && listen on all active IPs on port 8080
+
+# 'nginx' as user in config file
+tosearch="#user www-data"
+replacement="user nginx"
+sudo sed -i "s/$tosearch/$replacement/" /etc/nginx/nginx.conf
+
+# ownership and permissions of config file
+chmod 700 /etc/nginx/nginx.conf
+chown nginx:nginx /etc/nginx/nginx.conf
+
+tosearch="80 default_server"
+replacement="8080 default_server"
+
+# update nginx file to listen to 8080
+sed -i "s/$tosearch/$replacement/"  /etc/nginx/sites-enabled/default
+
+#kill process at port 8080
+pkill apache2
+
+#restart nginx as nginx user
+sudo -u nginx service nginx restart
