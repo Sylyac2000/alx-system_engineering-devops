@@ -18,12 +18,14 @@ if __name__ == '__main__':
         response = requests.get('{}/users/{}'.format(API_URL, id))
         user = response.json()
 
-        """ get user's todos """
-        response = requests.get('{}/todos'.format(API_URL))
-        todos = response.json()
-        emp_name = user.get('name')
-        tasks = list(filter(lambda x: x.get('userId') == id, todos))
-        completed_tasks = list(filter(lambda x: x.get('completed'), tasks))
+        if len(user) > 0:
+            """ get user's todos """
+            response = requests.get('{}/users/{}/todos'.format(API_URL, id))
+            todos = response.json()
+            emp_name = user.get('name')
+            tasks = list(filter(lambda x: x.get('userId') == id, todos))
+            completed_tasks = list(filter(lambda x: x.get('completed'), tasks))
+
         print(
             'Employee {} is done with tasks({}/{}):'.format(
                 emp_name,
@@ -31,6 +33,5 @@ if __name__ == '__main__':
                 len(tasks)
             )
         )
-        if len(completed_tasks) > 0:
-            for task in completed_tasks:
-                print('\t {}'.format(task.get('title')))
+        for task in completed_tasks:
+            print('\t {}'.format(task.get('title').strip()))

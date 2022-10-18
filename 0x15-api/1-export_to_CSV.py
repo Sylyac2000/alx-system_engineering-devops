@@ -20,7 +20,7 @@ if __name__ == '__main__':
         user = response.json()
 
         """ get user's todos """
-        response = requests.get('{}/todos'.format(API_URL))
+        response = requests.get('{}/users/{}/todos'.format(API_URL, id))
         todos = response.json()
         emp_name = user.get('name')
         tasks = list(filter(lambda x: x.get('userId') == id, todos))
