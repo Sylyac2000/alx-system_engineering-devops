@@ -9,19 +9,30 @@ if __name__ == '__main__':
     import requests
     from sys import argv
 
-    id = int(argv[1])
+    
 
-    """ get user """
-    theurl = "https://jsonplaceholder.typicode.com/users/{:d}".format(id)
-    response = requests.get(theurl)
-    user = response.json()
+    if len(argv) == 2:
+        id = int(argv[1])
 
-    """ get user's todos """
-    baseurl = "https://jsonplaceholder.typicode.com/users/"
-    theurl = baseurl + "{:d}/todos".format(id)
-    response = requests.get(theurl)
-    todos = response.json()
-    completed = [t.get("title") for t in todos if t.get("completed") is True]
-    print("Employee {} is done with tasks({}/{}):".format(
-        user.get("name"), len(completed), len(todos)))
-    [print("     {}".format(c)) for c in completed]
+        API_URL = "https://jsonplaceholder.typicode.com"
+
+        """ get user """
+        response = requests.get('{}/users/{}'.format(API_URL, id))
+        user = response.json()
+
+        """ get user's todos """
+        response = requests.get('{}/todos'.format(API_URL))
+        todos = response.json()
+        emp_name = user.get('name')
+        tasks = list(filter(lambda x: x.get('userId') == id, todos))
+        completed_tasks = list(filter(lambda x: x.get('completed'), tasks))
+        print(
+            'Employee {} is done with tasks({}/{}):'.format(
+                emp_name,
+                len(completed_tasks),
+                len(tasks)
+            )
+        )
+        if len(completed_tasks) > 0:
+            for task in completed_tasks:
+                print('\t {}'.format(task.get('title')))
