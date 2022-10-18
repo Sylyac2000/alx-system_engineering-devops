@@ -25,7 +25,6 @@ if __name__ == '__main__':
         emp_name = user.get('name')
         tasks = list(filter(lambda x: x.get('userId') == id, todos))
         completed_tasks = list(filter(lambda x: x.get('completed'), tasks))
-        
         username = user.get("username")
 
         with open("{}.csv".format(id), "w", newline="") as csvfile:
