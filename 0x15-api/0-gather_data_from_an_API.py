@@ -15,14 +15,14 @@ if __name__ == '__main__':
         req = requests.get("{}users/{}".format(API_URL, user))
         name = req.json().get("name")
         if name is not None:
-            jreq = requests.get(
+            todos = requests.get(
                 "{}todos?userId={}".format(
                     API_URL, user)).json()
-            alltask = len(jreq)
+            alltask = len(todos)
             completed = []
-            for t in jreq:
-                if t.get("completed") is True:
-                    completed.append(t)
+            for todo in todos:
+                if todo.get("completed") is True:
+                    completed.append(todo)
             count = len(completed)
             print("Employee {} is done with tasks({}/{}):"
                   .format(name, count, alltask))
