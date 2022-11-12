@@ -3,7 +3,7 @@ package { 'nginx':
   ensure => installed,
 }
 
-file_line { 'aaaaa':
+file_line { 'add_line':
   ensure => 'present',
   path   => '/etc/nginx/sites-available/default',
   after  => 'listen 80 default_server;',
