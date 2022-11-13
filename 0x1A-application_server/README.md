@@ -15,7 +15,7 @@ For this project, we expect you to look at these concepts:
 * Server
 * Web stack debugging
 
-<img src="https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2018/9/c7d1ed0a2e10d1b4e9b3.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221113%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221113T034412Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=a9fac2a5ce7034527edcc4d617162adae193db99d6aa0a80457e8e7bec20d99d"/>
+<img src="https://github.com/Sylyac2000/alx-system_engineering-devops/blob/main/0x1A-application_server/applicationserver.jpg?raw=true"/>
 ## Background Context
 
 
